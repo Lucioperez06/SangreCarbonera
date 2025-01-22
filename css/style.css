@@ -1,0 +1,1821 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+    background-color: #333;
+    color: #444;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que el menú se adapte */
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f1c40f;
+}
+
+.logo img {
+    width: 250px;  /* Ajusta el tamaño de la imagen */
+    height: auto;
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f1c40f; /* Amarillo */
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-bar.active .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
+.nav-bar .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #fff;
+}
+/* Oculta el menú para dispositivos pequeños y agrega un ícono hamburguesa */
+.nav-bar .nav-links {
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    gap: 20px; /* Espaciado entre los botones */
+}
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222; /* Fondo de la sección */
+    padding: 20px;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222; /* Fondo de la sección */
+    padding: 30px;
+}
+.hero-image {
+    max-width: 100%; /* La imagen nunca será más ancha que el contenedor */
+    height: auto;    /* Mantendrá la proporción original */
+    border: 5px solid #f1c40f; /* Borde amarillo */
+}
+
+.hero-image2 {
+    max-width: 35%; /* La imagen nunca será más ancha que el contenedor */
+    height: auto;    /* Mantendrá la proporción original */
+    border: 5px solid #000000; /* Borde amarillo */
+}
+.hero-section .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down; /* Mantiene proporciones */
+}
+.hero-placeholder {
+    width: 300px;
+    height: 300px;
+    background-color: #666;
+    border: 5px solid #f1c40f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos del carrusel */
+.swiper-container {
+    width: 100%;
+    height: 400px; /* Ajusta según el tamaño deseado del carrusel */
+    position: relative; /* Asegura que el texto pueda superponerse */
+    overflow: hidden;
+    margin-top: 50px; /* Ajusta el margen superior */
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    width: 100%; /* Las imágenes se ajustan al ancho del contenedor */
+    height: auto; /* Mantiene las proporciones */
+    object-fit: cover; /* Cubre el área del slide sin distorsión */
+  }
+
+  /* Ocultar los puntitos de paginación */
+  .swiper-pagination {
+    display: none; /* Esto oculta el contenedor de la paginación */
+  }
+  
+  .swiper-container {
+    overflow: hidden; /* Asegúrate de que el contenedor oculte todo fuera de su vista */
+  }
+  
+  .swiper-wrapper {
+    display: flex;
+    transition: transform 0.3s ease; /* Suaviza el movimiento inicial */
+  }
+  
+
+/* Ajustar el contenedor principal */
+.about-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2a2a2a;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 10;
+  width: 60%; /* Ajusta el ancho del cuadro */
+}
+
+/* Estilo del título */
+.about-section h2 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 36px;
+    color: #ffcc00; /* Amarillo intenso */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+}
+
+/* Estilo del texto */
+.about-section p {
+    font-family: 'Verdana', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #e6e6e6; /* Gris claro */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    margin-bottom: 15px;
+}
+
+/* Hacer los enlaces en el footer más llamativos */
+.footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+footer p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+    color: #444444;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p strong {
+    color: #FFD700; /* Amarillo oro, acorde a los colores del sitio */
+}
+
+footer p strong a {
+    color: #FFD700; /* Amarillo dorado */
+    text-decoration: none; /* Quita el subrayado */
+    transition: color 0.3s ease; /* Efecto suave de transición */
+}
+
+footer p strong a:hover {
+    color: #000000; /* Negro al pasar el mouse */
+    text-decoration: none; /* Mantener sin subrayado */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-column {
+    flex: 1 1 calc(25% - 20px); /* Ancho dinámico */
+    min-width: 200px;
+    text-decoration: none; /* Quita el subrayado */
+}
+
+.footer-column h3 {
+    color: #f1c40f;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: #f1c40f;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #ccc;
+    margin-top: 20px;
+}
+
+.footer-bottom a {
+    text-decoration: none;
+    color: #f1c40f;
+    margin: 0 10px;
+}
+
+.footer-column .social-media {
+    display: flex;
+    gap: 10px; /* Espaciado entre los iconos */
+    justify-content: center; /* Centra los iconos horizontalmente */
+    align-items: center;
+    margin-top: 10px;
+}
+
+.footer-column .social-media a img {
+    width: 32px; /* Tamaño de los iconos */
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.footer-column .social-media a img:hover {
+    transform: scale(1.2); /* Efecto de zoom al pasar el mouse */
+}
+
+
+/* Mejoras sugeridas */
+
+/* Ajustes generales para la clase hero-image */
+.hero-image3 {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+    max-height: 500px; /* Limita la altura máxima */
+    object-fit: cover; /* Recorta la imagen para que se ajuste sin deformarse */
+    display: block;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .about-section2 {
+        position: relative; /* Cambia el position para evitar el desfase */
+        top: 0; /* Asegura que no se superponga con otros elementos */
+        padding: 1em; /* Añade algo de espacio interno para un diseño limpio */
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+
+    .hero-image3 {
+        max-height: 300px; /* Reduce el tamaño de la imagen en pantallas pequeñas */
+    }
+
+    .footer-column .social-media {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+/* Ajustes específicos para secciones (como entrevistas) */
+.about-section2 {
+    position: relative;
+    z-index: 2; /* Se superpone sobre el fondo */
+    background: #00000000;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: -90px; /* Superposición sobre el fondo */
+}
+
+/*CSS de contacto*/ 
+
+.contact-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #2a2a2a; /* Fondo oscuro */
+    color: #fff;
+}
+
+.contact-section h2 {
+    font-size: 2.0rem;
+    color: #f1c40f; /* Color amarillo */
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #f1c40f;
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #f1c40f;
+    box-shadow: 0 0 5px #f1c40f;
+}
+
+.btn-submit {
+    background-color: #f1c40f;
+    color: #000;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #e1b200;
+}
+
+
+/* CSS DE GRCACIAS*/
+
+/* Page Content */
+.thank-you-container {
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border: 2px solid #f1c40f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    margin: 100px auto;
+}
+
+.thank-you-container h1 {
+    font-size: 2.5rem;
+    color: #f1c40f;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+}
+
+.thank-you-container p {
+    font-size: 1.2rem;
+    color: #e2e2e2;
+    line-height: 1.6;
+}
+
+.thank-you-container a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f1c40f;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.thank-you-container a:hover {
+    background-color: #000;
+    color: #f1c40f;
+}
+
+/* Estilos generales para la sección de entrevistas */
+.entrevistas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+/* Botones de entrevista */
+.entrevista-card {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #f1c40f;
+    border-radius: 8px;
+    transition: transform 0.3s, background-color 0.3s;
+    width: calc(33.333% - 20px); /* Tres columnas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.entrevista-card:hover {
+    background-color: #f1c40f;
+    color: #000;
+    transform: translateY(-10px);
+}
+
+/* Enlaces dentro de las tarjetas */
+.entrevista-card a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+.entrevista-card a:hover {
+    text-decoration: underline;
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .entrevista-card {
+        width: calc(50% - 20px); /* Dos columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .entrevista-card {
+        width: 100%; /* Una columna en pantallas pequeñas */
+    }
+}
+
+
+.background-quote {
+    position: relative;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #2a2a2a; /* Fondo oscuro */
+    text-align: center;
+    padding: 50px 20px;
+    flex-grow: 3; /* Permitir que crezca para ocupar espacio */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+.quote {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0;
+}
+
+.quote-author {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Estilo de la sección del equipo */
+.team-section {
+    background: #2a2a2a;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #e5c100;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.team-member {
+    background: #1a1a1a;
+    border: 2px solid #444;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.member-photo {
+    width: 60%;
+    height: auto;
+    border-radius: 0%;
+    margin-bottom: 15px;
+    border: 3px solid #e5c100;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.9);
+}
+
+.member-name {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #e5c100;
+}
+
+.member-role {
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+/* Sección de artículos */
+.articles-section {
+    background: #2a2a2a;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
+    gap: 20px; /* Espaciado entre los artículos */
+    max-width: 1200px;
+    margin: 0 auto; /* Centrar la sección */
+    padding: 20px;
+}
+
+.article-card {
+    background: #1a1a1a;
+    border-radius: 10px;
+    border: 2px solid #444; 
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.article-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.article-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block; /* Centra la imagen como bloque */
+    margin: 0 auto; /* Centra horizontalmente */
+}
+
+.article-image2 {
+    display: block; /* Centra la imagen como bloque */
+    margin: 0 auto; /* Centra horizontalmente */
+    max-width: 100%; /* Ajusta el ancho máximo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border: 2px solid #FFD700; /* Borde amarillo fino (2px) */
+    border-radius: 8px; /* Opcional: bordes redondeados */
+}
+
+.article-title {
+    font-size: 1.5rem;
+    color: #e5c100;
+    margin: 15px 0 10px;
+}
+
+.article-excerpt {
+    font-size: 1rem;
+    color: #ddd;
+    padding: 0 10px;
+    margin-bottom: 15px;
+}
+
+.article-link {
+    display: inline-block;
+    margin: 10px 0;
+    color: #e5c100;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.article-link:hover {
+    color: #fff;
+}
+
+/* 2 columnas en tablets (pantallas de hasta 1024px) */
+@media (max-width: 1024px) {
+    .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 1 columna en móviles (pantallas de hasta 768px) */
+@media (max-width: 768px) {
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .article-title {
+        font-size: 1.5rem;
+    }
+
+    .article-excerpt {
+        font-size: 1rem;
+    }
+}
+
+/* Página de artículo único */
+.single-article {
+    padding: 50px 20px;
+    background: #2a2a2a;
+    color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.single-article .article-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #e5c100;
+}
+
+.single-article .article-image {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.article-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.author {
+    font-family: "Georgia", serif; /* Fuente cursiva o estilo de imprenta */
+    font-style: normal;
+    font-size: 1.2rem; /* Tamaño ajustable */
+    color: #f6e441; /* Color dorado claro */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para un efecto más llamativo */
+    margin-top: 20px; /* Separación del contenido anterior */
+    text-align: right; /* Alineación a la derecha (opcional) */
+}
+
+.fecha {
+    font-family: "Georgia", serif; /* Fuente cursiva o estilo de imprenta */
+    font-style: normal;
+    font-size: 0.8rem; /* Tamaño ajustable */
+    color: #818181c6; /* Color dorado claro */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para un efecto más llamativo */
+    margin-top: 20px; /* Separación del contenido anterior */
+    text-align: left; /* Alineación a la izquierda */
+}
+
+
+/* Pagina Sobre Nosotros */
+
+.about-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1a1a1a; /* Fondo oscuro */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 0, 0.7);
+    border: 2px solid #444;
+    text-align: center;
+}
+
+.about-intro {
+    margin-bottom: 40px;
+}
+
+.our-mission {
+    background-color: #333; /* Fondo oscuro para la misión */
+    color: #ffffffc8; /* Texto blanco */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Estilos para la página de selección de secciones */
+.menu {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #2a2a2a
+}
+
+.menu h1 {
+    font-size: 2.5rem;
+    color: #e5c100;
+    margin-bottom: 10px;
+}
+
+.menu p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+/* Diseño del grid de opciones */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid #e5c100;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    background-color: #e5c100;
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+.menu-item:hover h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #000000;
+}
+.menu-item h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #e5c100;
+}
+
+.menu-item p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.menu-item:hover p {
+    font-size: 1rem;
+    color: #4d4d4d;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .menu h1 {
+        font-size: 2rem;
+    }
+
+    .menu p {
+        font-size: 1rem;
+    }
+}
+
+/* Estilos generales para la sección Historia */
+.historia {
+    background-color: #333; /* Fondo gris claro */
+    padding: 40px 20px;
+    margin-top: 20px;
+}
+
+.historia-contenedor {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #444; /* Fondo blanco para la caja */
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.historia h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5rem;
+    color: #e5c100; /* Color oscuro para el título */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.historia p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff; /* Gris oscuro para el texto */
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.historia p:last-child {
+    margin-bottom: 0;
+}
+
+/* Estilo de la caja de contenido */
+@media (max-width: 768px) {
+    .historia h1 {
+        font-size: 2rem; /* Ajuste de tamaño de título en pantallas pequeñas */
+    }
+
+    .historia p {
+        font-size: 1rem; /* Ajuste de tamaño de texto en pantallas pequeñas */
+    }
+}
+
+/* Estilos generales para la sección de logros */
+.logros {
+    background-color: #333;
+    padding: 40px 20px;
+    margin-top: 20px;
+}
+
+.logros-contenedor {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #444; /* Fondo gris claro */
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logros h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.2rem;
+    color: #e5c100;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logros p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.logros-lista {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.logro {
+    flex: 1;
+    background-color: #333; /* Fondo gris claro para cada bloque de logro */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logro h3 {
+    font-size: 1.5rem;
+    color: #e5c100;
+    margin-bottom: 10px;
+}
+
+.logro ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.logro ul li {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.logro ul li:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .logros-lista {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logro {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilos generales para la sección de ídolos históricos */
+.idolos {
+    background-color: #333;
+    padding: 40px 20px;
+    margin-top: 20px;
+}
+
+.idolos-contenedor {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #444;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.idolos h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.2rem;
+    color: #e5c100;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.idolos p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.idolos-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.idolo {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.idolo h3 {
+    font-size: 1.5rem;
+    color: #000000;
+    margin-top: 15px;
+}
+
+.idolo p {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.idolo-imagen {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .idolos h2 {
+        font-size: 2rem;
+    }
+
+    .idolos p {
+        font-size: 1rem;
+    }
+}
+
+/* Estilos generales para la sección de clásicos inolvidables */
+.clasicos {
+    background-color: #333;
+    padding: 40px 20px;
+    margin-top: 20px;
+}
+
+.clasicos-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #444;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.clasicos h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.2rem;
+    color: #e5c100;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.clasicos p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.clasicos-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.clasico {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid #e5c100;
+}
+
+.clasico h3 {
+    font-size: 1.5rem;
+    color: #e5c100;
+    margin-top: 15px;
+}
+
+.clasico p {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.clasico-imagen {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .clasicos h2 {
+        font-size: 2rem;
+    }
+
+    .clasicos p {
+        font-size: 1rem;
+    }
+}
+
+/* Estilos generales para la sección del estadio */
+.estadio {
+    background-color: #333;
+    padding: 40px 20px;
+    margin-top: 20px;
+}
+
+.estadio-contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #444;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.estadio h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.2rem;
+    color: #e5c100;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.estadio p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.estadio-historia {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 columnas en pantallas grandes */
+    gap: 20px; /* Espaciado entre los artículos */
+    max-width: 1200px;
+    margin: 0 auto; /* Centrar la sección */
+    padding: 20px;
+}
+
+.estadio-item {
+    flex: 1;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #e5c100;
+}
+
+.estadio-item h3 {
+    font-size: 1.5rem;
+    color: #e5c100;
+    margin-top: 15px;
+}
+
+.estadio-item p {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.estadio-imagen {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 2 columnas en tablets (pantallas de hasta 1024px) */
+@media (max-width: 1024px) {
+    .estadio-historia {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 1 columna en móviles (pantallas de hasta 768px) */
+@media (max-width: 768px) {
+    .estadio-historia {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .estadio-historia {
+        flex-direction: column;
+    }
+
+    .estadio h2 {
+        font-size: 2rem;
+    }
+
+    .estadio p {
+        font-size: 1rem;
+    }
+}
+
+/* Estilos generales para la sección de actualidad */
+.actualidad {
+    background-color: #333;
+    padding: 40px 20px;
+    margin-top: 20px;
+}
+
+.actualidad-contenedor {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #444;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.actualidad h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.2rem;
+    color: #e5c100;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.actualidad p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.actualidad-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.actualidad-item {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #e5c100;
+}
+
+.actualidad-item h3 {
+    font-size: 1.5rem;
+    color: #e5c100;
+    margin-top: 15px;
+}
+
+.actualidad-item p {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.actualidad-imagen {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón de ver más */
+.btn-mas {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #e5c100;
+    color: #000;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-mas:hover {
+    background-color: #c4a000;
+    color: #fff;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .actualidad h2 {
+        font-size: 2rem;
+    }
+
+    .actualidad p {
+        font-size: 1rem;
+    }
+}
+
+/* Estilos generales para la sección de la hinchada */
+.hinchada {
+    background-color: #333;
+    padding: 40px 20px;
+    margin-top: 20px;
+}
+
+.hinchada-contenedor {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #444;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hinchada h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.2rem;
+    color: #e5c100;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hinchada p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.hinchada-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.hinchada-item {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #e5c100;
+}
+
+.hinchada-item h3 {
+    font-size: 1.5rem;
+    color: #e5c100;
+    margin-top: 15px;
+}
+
+.hinchada-item p {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.hinchada-imagen {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .hinchada h2 {
+        font-size: 2rem;
+    }
+
+    .hinchada p {
+        font-size: 1rem;
+    }
+}
+
+/* Estilos generales para la sección de proyectos a futuro */
+.proyectos {
+    background-color: #333;
+    padding: 40px 20px;
+    margin-top: 20px;
+}
+
+.proyectos-contenedor {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #444;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.proyectos h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.2rem;
+    color: #e5c100;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.proyectos p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.proyectos-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.proyecto-item {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #e5c100;
+}
+
+.proyecto-item h3 {
+    font-size: 1.5rem;
+    color: #e5c100;
+    margin-top: 15px;
+}
+
+.proyecto-item p {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.proyecto-imagen {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .proyectos h2 {
+        font-size: 2rem;
+    }
+
+    .proyectos p {
+        font-size: 1rem;
+    }
+}
+
+/* Estilos para la sección de institucionalidad */
+.institution-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.section-subtitle {
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.institution-title {
+    font-size: 2.5rem;
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.institution-description {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.institution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center; /* Centra elementos individuales */
+    justify-content: center; /* Centra la fila incompleta */
+}
+
+
+.institution-card {
+    flex: 1 1 calc(33.33% - 20px); /* 3 columnas por fila */
+    max-width: 250px; /* Tamaño máximo de cada tarjeta */
+    text-align: center;
+}
+
+.institution-member {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.institution-member:hover {
+    transform: translateY(-5px);
+}
+
+.member-photo {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #ffcc00;
+}
+
+.member-name {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    font-size: 1.1rem;
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+
+/*Media quaries para responsive*/
+
+/* Ajuste para pantallas muy pequeñas (móviles pequeños, 320px - 480px) */
+@media (max-width: 480px) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero-section {
+        padding: 20px;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Ajuste para tablets (481px - 768px) */
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links {
+        gap: 15px;
+    }
+    .hero-image {
+        max-width: 100%;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .team-grid, .articles-grid {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en tablets */
+    }
+}
+
+/* Ajuste para laptops (769px - 1024px) */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 20px;
+    }
+    .team-grid, .articles-grid {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas en laptops */
+    }
+}
+
+/* Ajuste para pantallas grandes (más de 1200px) */
+@media (min-width: 1200px) {
+    .hero-image {
+        max-width: 110%;
+    }
+    .footer-container {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 768px) {
+    .entrevista-card {
+        width: 100%; /* Una sola columna para móviles */
+    }
+}
+
+@media (min-width: 769px) {
+    .entrevista-card {
+        width: calc(33.333% - 20px); /* Tres columnas en pantallas grandes */
+    }
+}
+
+button, input, textarea {
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Diseño responsivo para móviles (pantallas de 425px o menos) */
+@media (max-width: 768px) {
+    .articles-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Espaciado entre las noticias */
+    }
+
+    .article-card {
+        width: 100%; /* Ocupa el ancho completo de la pantalla */
+    }
+
+    .article-image {
+        max-width: 100%; /* Hace que la imagen se ajuste correctamente */
+        height: auto;
+    }
+}
+
+/* Pantallas medianas: tablets (768px a 1024px) */
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Pantallas pequeñas: móviles (425px a 767px) */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr; /* 1 columna en móviles */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-column {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Ajustes específicos para móviles pequeños (menos de 425px) */
+@media (max-width: 426px) {
+    .team-section {
+        padding: 15px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .team-grid {
+        gap: 20px;
+    }
+
+    .team-member {
+        padding: 15px;
+    }
+
+    .member-name {
+        font-size: 1.3rem;
+    }
+
+    .member-role {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Media queries para responsividad */
+
+/* Ajustes para tablets (pantallas de hasta 768px) */
+@media (max-width: 768px) {
+    .thank-you-container {
+        width: 95%;
+        padding: 30px;
+    }
+
+    .thank-you-container h1 {
+        font-size: 2rem;
+    }
+
+    .thank-you-container p {
+        font-size: 1rem;
+    }
+
+    .thank-you-container a {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}
+
+/* Ajustes para móviles (pantallas de hasta 480px) */
+@media (max-width: 480px) {
+    .thank-you-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .thank-you-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .thank-you-container p {
+        font-size: 0.9rem;
+    }
+
+    .thank-you-container a {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+
